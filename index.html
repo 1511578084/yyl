@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>测试定位</title>
+</head>
+<script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.9.1/vconsole.min.js"></script>
+<script>
+ var vConsole = new VConsole();
+</script>
+<body>
+  <div id="btn">点击</div>
+    <script>
+      document.querySelector('#btn').onclick = function() {
+        navigator.geolocation.getCurrentPosition((e) => {
+        console.log('s', e)
+       },(err) => {
+        console.log(err)
+       })
+       }
+    </script>
+</body>
+</html>
