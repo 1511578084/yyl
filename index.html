@@ -13,12 +13,18 @@
     #phone {
       user-select: text;
     }
+
+    #username {
+      user-select: auto;
+    }
   </style>
 </head>
 <body>
   <div onclick="clickLable()">选中输入框</div>
   <input type="tel" name="phone" id="phone">
   <div id="box"></div>
+  <input type="text" name="username" id="username">
+  <div id="boxName"></div>
   <script>
     function clickLable() {
       window.phone.focus()
@@ -26,6 +32,10 @@
 
     window.phone.oninput = function () {
       window.box.innerText = window.phone.value
+    }
+
+    window.username.oninput = function () {
+      window.boxName.innerText = window.username.value
     }
   </script>
 </body>
