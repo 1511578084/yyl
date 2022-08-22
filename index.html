@@ -4,24 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>user-select</title>
   <style>
-    .box1 {
-      width: 100px;
-      height: 100px;
-      background-color: #608ce7e6;
-    }
 
-    .box2 {
-      width: 100px;
-      height: 100px;
-      background-color: rgb(96, 140, 231, 0.9);
+    * {
+      user-select: none;
+    }
+    .input {
+      user-select: auto;
     }
   </style>
 </head>
 <body>
-  <div class="box1"></div>
-  <div class="box2"></div>
+  <div onclick="clickLable()">选中输入框</div>
+  <input type="tel" name="phone" id="phone">
+  <script>
+    function clickLable() {
+      window.phone.focus()
+    }
+  </script>
 </body>
 </html>
-Footer
