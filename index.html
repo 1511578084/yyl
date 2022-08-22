@@ -18,9 +18,14 @@
 <body>
   <div onclick="clickLable()">选中输入框</div>
   <input type="tel" name="phone" id="phone">
+  <div id="box"></div>
   <script>
     function clickLable() {
       window.phone.focus()
+    }
+
+    window.phone.oninput = function () {
+      window.box.innerText = window.phone.value
     }
   </script>
 </body>
