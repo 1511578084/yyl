@@ -4,40 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>user-select</title>
+  <title>Document</title>
   <style>
-
-    * {
-      user-select: none;
-    }
-    #phone {
-      user-select: text;
-    }
-
-    #username {
-      user-select: auto;
+    .input {
+      width: 100px;
+      border: none;
+      outline: none;
     }
   </style>
 </head>
 <body>
-  <div onclick="clickLable()">选中输入框</div>
-  <input type="tel" name="phone" id="phone">
-  <div id="box"></div>
-  <input type="text" name="username" id="username">
-  <div id="boxName"></div>
-  <input type="search" name="keyword" >
-  <script>
-    function clickLable() {
-      window.phone.focus()
-    }
-
-    window.phone.oninput = function () {
-      window.box.innerText = window.phone.value
-    }
-
-    window.username.oninput = function () {
-      window.boxName.innerText = window.username.value
-    }
-  </script>
+  <input class="input" type="text" readonly value="哈哈哈哈嘎嘎嘎嘎嘎哈哈哈">
 </body>
 </html>
