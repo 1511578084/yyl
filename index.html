@@ -29,6 +29,7 @@
   <div class="box">
     <div>html的滚动高度<span id="AA"></span></div>
     <div>body的滚动高度<span id="BB"></span></div>
+    <div>window的滚动高度<span id="CC"></span></div>
   </div>
   <div class="container">
     <div class="son"></div>
@@ -37,6 +38,7 @@
     window.onscroll = function () {
       window.AA.innerText = document.documentElement.scrollTop
       window.BB.innerText = document.body.scrollTop
+      window.CC.innerText = window.scrollY
     }
   </script>
 </body>
