@@ -30,6 +30,7 @@
     <div>html的滚动高度<span id="AA"></span></div>
     <div>body的滚动高度<span id="BB"></span></div>
     <div>window的滚动高度<span id="CC"></span></div>
+    <div>页面模式<span id="DD"></span></div>
   </div>
   <div class="container">
     <div class="son"></div>
@@ -39,6 +40,7 @@
       window.AA.innerText = document.documentElement.scrollTop
       window.BB.innerText = document.body.scrollTop
       window.CC.innerText = window.scrollY
+      window.DD.innerText = document.compatMode
     }
   </script>
 </body>
