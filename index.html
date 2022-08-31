@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    .box {
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
     .container {
       width: 100px;
       height: 100px;
@@ -21,8 +26,18 @@
   </style>
 </head>
 <body>
+  <div class="box">
+    <div>html的滚动高度<span id="AA"></span></div>
+    <div>body的滚动高度<span id="BB"></span></div>
+  </div>
   <div class="container">
     <div class="son"></div>
   </div>
+  <script>
+    window.onscroll = function () {
+      window.AA.innerText = document.documentElement.scrollTop
+      window.BB.innerText = document.body.scrollTop
+    }
+  </script>
 </body>
 </html>
